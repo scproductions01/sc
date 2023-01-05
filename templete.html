@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Movie Name</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/utils.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+</head>
+<style>
+    body{
+        background: rgb(125,0,0);
+    }
+
+    .rating{
+        height: 150px;
+        width: 150px;
+        margin-bottom: 0;
+        display: inline-block;
+    }
+    .synopsis{
+        border-style: solid;
+        border-color: white ;
+    }
+    .details{
+        width: 66%;
+        height: 5rem;
+        border-style: solid;
+        border-color: white;
+        margin-top: 0;
+    }
+    .details-row1{
+        border-style: solid;
+        border: 2px;
+        border-color: white;
+        border-collapse:collapse;
+        background-color: rgb(125, 125, 0);
+    }
+    .details-row2{
+        border-style: solid;
+        background-color: rgb(246, 207, 136);
+    }
+    table,tr,td,th{
+        border: solid;
+        border-width: 3px;
+        border-collapse: collapse;
+    }
+    .poster{
+        border: 2px solid white;
+        height: 100%;
+    }
+    .pad-min{
+        padding: 0 2rem;
+    }
+    .mb-0{
+        margin-bottom: 0;
+        padding-bottom: 0%;
+        padding-left: 0%;
+    }
+    .mt-0{
+        margin-top: 0;
+        padding-top: 0%;
+    }
+    
+    
+    /* Newly Added */
+.table{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.table td,.table th{
+  padding:12px 15px;
+  border:3px solid white;
+  text-align: center;
+  font-size:20px;
+}
+
+.table th{
+	background-color: rgb(126, 172, 0);
+	color:#ffffff;
+}
+
+.table tbody{
+	background-color: rgb(251, 202, 112);
+}
+
+/*responsive*/
+
+@media(max-width: 500px){
+	.table thead{
+		display: none;
+	}
+
+	.table, .table tbody, .table tr, .table td{
+		display: block;
+		width: 100%;
+	}
+	.table tr{
+		margin-bottom:15px;
+	}
+	.table td{
+		text-align: right;
+		padding-left: 50%;
+		text-align: right;
+		position: relative;
+	}
+	.table td::before{
+		content: attr(data-label);
+		position: absolute;
+		left:0;
+		width: 50%;
+		padding-left:15px;
+		font-size:15px;
+		font-weight: bold;
+		text-align: left;
+	}
+}
+
+/* Newly Added */
+    
+</style>
+<body>
+    <!-- Header Start -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark text-white">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white" href="/index.html"><img class="sclogo" src="/img/SUPERCLUSTERS PRODUCTIONS.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/about.html">About Us</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Contents
+                            </a>
+                            <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item text-white" href="/movies.html">Movies</a></li>
+                                <li><a class="dropdown-item text-white" href="/drama.html">TV Series</a></li>
+                                <li><a class="dropdown-item text-white" href="/kids.html">Kids</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header End -->
+
+
+    <!-- Imgage with details start -->
+    <div class="container-fluid mb-0">
+       <div class="row">
+        <div class="col-md-4">
+            <img class="poster" src="/img/movieimg/movie1.png" alt="">
+        </div>
+        <div class="col-md-4">
+            <div class="trailer text-center">
+                <h1 class="heading text-white text-center">Trailer</h1>
+                <video controls muted width="85%" height="90%">
+                    <source src="/videos/Bravestorm_Trailer2_SCP_Web.mp4">
+                </video>
+            </div>
+            <div class="screener text-center">
+                <!-- <h1 class="heading text-white text-center">Screener</h1> -->
+                <video controls="" width="85%" height="90%">
+                    <source src="/videos/KungFuKiller_Trailer_SCP_Website.mp4" type="video/mp4">
+                </video>
+            </div>
+            <!-- <div class="synopsis text-white text-center">
+                <div class="heading pad-min">
+                    <h1>Synopsis :</h1>
+                </div>
+                <div class="handwriting pad-min">This is a very Good Movie</div>
+            </div> -->
+        </div>
+        <div class="col-md-4">
+            <div class="trailer2 text-center">
+                <h1 class="heading text-white text-center">Screener</h1>
+                <video controls="" width="85%" height="90%">
+                    <source src="/videos/KungFuKiller_Trailer_SCP_Website.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="screener2 text-center">
+                <!-- <h1 class="heading text-white text-center">Screener</h1> -->
+                <video controls="" width="85%" height="90%">
+                    <source src="/videos/KungFuKiller_Trailer_SCP_Website.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+       
+    </div>
+</div><div class="grid row">
+    <div class="col-md-8 tablec">
+    <table class="table">
+     <thead>
+         <tr>
+            <th>TITLE</th>
+            <th>STARCAST</th>
+            <th>ORIGINAL LANGUAGE</th>
+            <th>GENRE</th>
+            <th>RELEASE DATE</th>
+         </tr>
+     </thead>
+     <tbody>
+           <tr>
+                 <td data-label="TITLE">Yess Sir</td>
+                 <td data-label="STARCAST">Yess Sir</td>
+                 <td data-label="ORIGINAL LANGUAGE">Yess Sir</td>
+                 <td data-label="GENRE">GENRE</td>
+                 <td data-label="RELEASE DATE">Yess Sir</td>
+           </tr>
+
+     </tbody>
+   </table>
+ </div>
+   <div class="col-md-4 Imdb">
+     <img class="rating" src="/img/SUPERCLUSTERS PRODUCTIONS.png" alt="">
+  </div> 
+ </div>
+    </div>
+    <!-- Imgage with details start -->
+
+
+    <!-- Footer Start -->
+    <footer>
+        <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Our Office</h5>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>214, Karthik Complex,New Link</p>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i> Road,Andheri(W,Mumbai,</p>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Maharashtra 400053</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 2249699444</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@scproduction.in</p>
+                        
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Quick Links</h5>
+                        <a class="btn btn-link" href="/about.html">About Us</a>
+                        <a class="btn btn-link" href="/contact.html">Contact Us</a> 
+                        <a class="btn btn-link" href="">Privacy policy</a>
+                        <a class="btn btn-link" href="">Terms & Condition</a>
+                        <a class="btn btn-link" href="">Support</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Sister Companies</h5>
+                        <a class="btn btn-link" href="">Company 1</a>
+                        <a class="btn btn-link" href="">Company 2</a> 
+                        <!-- <a class="btn btn-link" href="">Privacy policy</a> -->
+                        <!-- <a class="btn btn-link" href="">Terms & Condition</a>
+                        <a class="btn btn-link" href="">Support</a> -->
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-white mb-4">Connect With Us</h5>
+                        <div class="d-flex pt-3">
+                            <a class="btn btn-square btn-primary rounded-circle me-2" href="https://mobile.twitter.com/sc_productions_"><i
+                                    class="fab fa-twitter"><img src="/img/TWITTER.png" alt=""></i></a>
+                            <a class="btn btn-square btn-primary rounded-circle me-2" href="https://m.facebook.com/people/Supercluster-Productions/100083232463990/"><i
+                                    class="fab fa-facebook-f"><img src="/img/FACEBOOK.png" alt=""></i></a>
+                            <a class="btn btn-square btn-primary rounded-circle me-2" href="https://www.youtube.com/@SUPERCLUSTERPRODUCTIONS"><img src="/img/logoyoutube.png" alt=""></a>
+                            <a class="btn btn-square btn-primary rounded-circle me-2" href="https://www.linkedin.com/company/supercluster-production/"><img src="/img/LINKED-IN.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+     <!-- Copyright Start -->
+     <div class="container-fluid copyright bg-dark py-4">
+        <div class="container text-center">
+            <p class="mb-2">Copyright &copy; <a class="fw-semi-bold" href="/index.html">Supercluster</a>, All Right Reserved.
+            </p>    
+        </div>
+    </div>
+    <!-- Copyright End -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
